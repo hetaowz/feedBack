@@ -16,29 +16,28 @@
     </script>
 </head>
 <body>
-<div class="action"style="margin-top: 50px;">
+<div class="action" style="margin-top: 50px;">
     &nbsp;
 </div>
 <!-- Main content wrapper -->
 <div class="wrapper">
-    <div style="background-color: #00ff24;width: 1000px;height: 100px;">
-        <div  style="float: left;width: 100px;background-color:darkblue;display: inline-block;">
-            <a class="wContentButton bluewB" title="" href="${pageContext.request.contextPath}/backend/userform.html">添加用户</a>
-        </div>
-    <div class="searchWidget" style="margin-left:20px;float: left ;background-color: #111111;display: inline-block;vertical-align: bottom; ">
+
+    <div class="searchWidget" style="float: left ;">
         <form action="${pageContext.request.contextPath}/backend/useroverview.html" method="post">
-            <span><label>姓名：</label><input type="text" placeholder="Enter search text..." name="filername" value="${paging.name}"></span>
-            <input type="submit" value="" name="find" onclick="this.form.submit()";/>
+            <span><label>姓名：</label><input type="text" placeholder="请输入..." name="filername"
+                                           value="${paging.name}"></span>
+            <input type="submit" value="" name="find" onclick="this.form.submit()" ;/>
         </form>
     </div>
-
+    <div class="" style="float: right;">
+        <a title="" href="${pageContext.request.contextPath}/backend/userform.html">
+            <img alt="" src="${pageContext.request.contextPath}/images/icons/control/32/hire-me.png">
+            <span>添加用户</span>
+        </a>
     </div>
 
-
-
-
     <div class="widget">
-        <div class="title"><img src="images/icons/dark/frames.png" alt="" class="titleIcon"/><h6>用户管理</h6>
+        <div class="title"><img src="${pageContext.request.contextPath}/images/icons/dark/frames.png" alt="" class="titleIcon"/><h6>用户管理</h6>
         </div>
         <table cellpadding="0" cellspacing="0" width="100%" class="sTable">
             <thead>
@@ -71,20 +70,20 @@
                     </td>
                     <td>
                         <a href="${pageContext.request.contextPath}/backend/userform.html?userId=${user.id}&filername=${filername}&current=${current}">
-                            <button class="thoughtbot">编辑</button>
+                            <button class="editBtn bluewB" >编辑</button>
                         </a>
 
                         <c:if test="${user.username != 'qsadmin'}">
                             <c:if test="${user.enabled}">
                                 <a href="${pageContext.request.contextPath}/backend/userchangeenable.html?userId=${user.id}&filername=${filername}&current=${current}"
                                    onclick="return userDeleteConfirm();">
-                                    <button class="thoughtbot">停用</button>
+                                    <button class="editBtn redwB" style="text-align: end">停用</button>
                                 </a>
                             </c:if>
                             <c:if test="${!user.enabled}">
                                 <a href="${pageContext.request.contextPath}/backend/userchangeenable.html?userId=${user.id}&filername=${filername}&current=${current}"
                                    onclick="return userEnableConfirm();">
-                                    <button class="thoughtbot">激活</button>
+                                    <button class="editBtn greenwB">激活</button>
                                 </a>
                             </c:if>
                         </c:if>
@@ -94,6 +93,9 @@
             </tbody>
         </table>
     </div>
+</div>
+<div class="paging" style="float:right;">
+    <ch:paging urlMapping="${pageContext.request.contextPath}/backend/useroverview.html" showGoTo="false" paging="${paging}"/>
 </div>
 </body>
 </html>

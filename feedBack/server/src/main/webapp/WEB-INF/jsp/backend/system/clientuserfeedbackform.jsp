@@ -23,16 +23,6 @@
                 <table cellspacing="0" width="100%">
                     <input type="hidden" name="id" value="${feedback.id}"/>
 
-                    <%--<tr>--%>
-                        <%--<td width="200px;">--%>
-                             <%--用户 <span class="required">*</span>--%>
-                        <%--</td>--%>
-                        <%--<td>--%>
-                            <%--<spring-form:input path="username" maxlength="30" cssStyle="width:300px;"/>&nbsp;--%>
-                            <%--<spring-form:errors path="username" cssClass="required"/>--%>
-                        <%--</td>--%>
-                    <%--</tr>--%>
-
                     <tr>
                         <td>
                            MAC地址<span class="required">*</span>

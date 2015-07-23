@@ -123,5 +123,14 @@ public class IbatisFeedBackInfoDaoImpl extends IbatisEntityObjectDao implements 
         getSqlMapClientTemplate().insert("Movie.insertTvChannelInfo", values);
     }
 
-
+    @Override
+    public void saveClientLocationInfo(String clientLocation) {
+        JSONObject clientLocationInfo=JSON.parseObject(clientLocation);
+        Map<String,String> values=new HashMap<String, String>();
+        values.put("userMac",clientLocationInfo.getString("userMac"));
+        values.put("lon",clientLocationInfo.getString("lon"));
+        values.put("lat",clientLocationInfo.getString("lat"));
+        initSqlMapClient();
+        getSqlMapClientTemplate().insert("Movie.insertClientLocationInfo", values);
+    }
 }

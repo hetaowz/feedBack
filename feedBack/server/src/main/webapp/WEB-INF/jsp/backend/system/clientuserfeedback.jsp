@@ -21,7 +21,7 @@
     <script src="${pageContext.request.contextPath}/dwr/interface/SystemDWRHandler.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="action">
+<div class="action" style="margin-top: 50px;">
     &nbsp;
 </div>
 <table cellpadding="0" cellspacing="0" width="100%" class="box">
@@ -75,9 +75,11 @@
                     <span>
                         报表类型:&nbsp;曲线图
                     </span>
-                    <input type="button" value="统计" onclick="generateReport(); "/>
+                    <input type="button" value="统计" class="editBtn redwB"  onclick="generateReport(); "/>
+                    <%--<button  class="editBtn bluewB" onclick="javaScript:return generateReport();">统计</button>--%>
                 </div>
             </form>
+
 
             <table cellpadding="0" cellspacing="0" width="100%">
                 <tr>
@@ -89,7 +91,7 @@
                     <td>
                         <div id="container1" style="width:80%; height: 350px; padding-left: 20px"></div>
                         <p style="margin-left:20px;">
-                            <button id="feedbackexcel">导出Excel文件</button>
+                            <button id="feedbackexcel" class="editBtn greenwB">导出Excel文件</button>
                         </p>
                     </td>
                 </tr>
@@ -173,7 +175,7 @@
             }
     }
 
-    function generateReport() {
+    function generateReport(){
         var status = jQuery("#status").val();
         var year = jQuery("#reportYear").val();
         var month = jQuery("#reportMonth").val();

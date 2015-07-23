@@ -39,7 +39,7 @@
     </script>
 </head>
 <body>
-<div id="map" style="width:1300px;height:800px; margin-top: 15px;margin-left: 5px;"></div>
+<div id="map" style="width:1100px;height:600px; margin-top: 35px;margin-left: 15px;"></div>
 
 <p><input id="x" type="hidden" value="${lon}"/>&nbsp; &nbsp; <input id="y" type="hidden" value="${lat}"/>
 </p>

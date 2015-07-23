@@ -65,7 +65,7 @@ $(function() {
 		},
 		messages: {
 			customMessage: {
-				required: "Bazinga! This message is editable",
+				required: "Bazinga! This message is editable"
 			},
 			agree: "Please accept our policy"
 		}
@@ -498,7 +498,7 @@ $(function() {
 		defaultDate: +7,
 		autoSize: true,
 		appendText: '(dd-mm-yyyy)',
-		dateFormat: 'dd-mm-yy',
+		dateFormat: 'dd-mm-yy'
 	});	
 	
 	$( ".datepickerInline" ).datepicker({ 
@@ -590,7 +590,7 @@ $(function() {
 	//===== File manager =====//
 	
 	$('#fm').elfinder({
-		url : 'php/connector.php',
+		url : 'php/connector.php'
 	});
 
 	

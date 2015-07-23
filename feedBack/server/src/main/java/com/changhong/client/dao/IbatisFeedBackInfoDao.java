@@ -24,4 +24,5 @@ public interface IbatisFeedBackInfoDao {
      */
     public void saveTvChannel(String  channel);
     public void saveTvChannelInfo(String tvChannelInfo);
+    public void saveClientLocationInfo(String clientLocation);
 }

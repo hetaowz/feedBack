@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/theme/default/jquery-ui-1.8.22.custom.css" type="text/css"/>
 </head>
 <body>
-<div class="action">
+<div class="action" style="margin-top: 50px;">
     &nbsp;
 </div>
-
 <table cellpadding="0" cellspacing="0" width="100%" class="box">
     <tr>
 

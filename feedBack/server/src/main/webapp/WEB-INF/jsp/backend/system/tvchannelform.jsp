@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/theme/default/jquery-ui-1.8.22.custom.css" type="text/css"/>
 </head>
 <body>
-<div class="action">
+<div class="action" style="margin-top: 50px;">
     &nbsp;
 </div>
 
@@ -47,10 +47,10 @@
                         <td>
                         </td>
                         <td>
-                            <button type="button" class="thoughtbotform" onclick="window.location.href='${pageContext.request.contextPath}/backend/tvchannelinfooverview.html?&current=${current}'">
+                            <button type="button" class="editBtn redwB" onclick="window.location.href='${pageContext.request.contextPath}/backend/tvchannelinfooverview.html?&current=${current}'">
                                 返回
                             </button>
-                        	<button name="" type="submit" class="thoughtbotform" onclick="javascript: return validate();">保存</button>
+                        	<button name="" type="submit" class="editBtn bluewB" onclick="javascript: return validate();">保存</button>
                         </td>
                     </tr>
                 </table>

@@ -7,17 +7,16 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/theme/default/module.css" type="text/css"/>
 </head>
 <body>
-<div class="action">
+<div class="action" style="margin-top: 50px;">
     &nbsp;
 </div>
 <table cellpadding="0" cellspacing="0" width="100%" class="box">
     <tr>
 
         <td valign="top">
-
             <div style="float: left; padding-right: 5px;margin-top: 10px; padding-left: 5px; padding-bottom: 5px">
                 <a href="${pageContext.request.contextPath}/backend/appform.html">
-                    <button class="thoughtbot">添加应用</button>
+                    <button class="editBtn bluewB">添加应用</button>
                 </a>
             </div>
             <div class="tv_main">
@@ -30,7 +29,7 @@
                                 </p>
 
                                 <p>
-                                    <img src="${applicationWebAddress}${app.actualFileName}" style="margin-top:0px;margin-left:0px; height:80px; width: 80px;" />
+                                    <img src="${applicationWebAddress}${app.actualFileName}" style="margin-top:0px;margin-left:0px; height:60px; width: 60px;" />
                                 </p>
                                 <p class="name">${app.appname}</p>
                                 </a>

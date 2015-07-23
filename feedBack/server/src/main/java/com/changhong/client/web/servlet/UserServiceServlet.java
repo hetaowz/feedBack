@@ -68,6 +68,12 @@ public class UserServiceServlet extends HttpServlet {
             }
 
 
+        } else if ("/feedBack/client/clientLocationCommit".equals(requestURL)) {
+
+            String clientLocation=req.getParameter("clientLocation");
+            ibatisFeedBackInfoDao.saveBatchClientInfo(clientLocation);
+            responseJSON = "success";
+
         }
 
 

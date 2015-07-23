@@ -21,12 +21,11 @@
     <script src="${pageContext.request.contextPath}/dwr/interface/SystemDWRHandler.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="action">
+<div class="action" style="margin-top: 50px;">
     &nbsp;
 </div>
 <table cellpadding="0" cellspacing="0" width="100%" class="box">
     <tr>
-
 
         <td valign="top">
             <form action="#" class="search_form" method="POST">
@@ -76,7 +75,7 @@
                     <span>
                         报表类型:&nbsp;柱状图
                     </span>
-                    <input type="button" value="统计" onclick="generateReport(); "/>
+                    <input type="button" value="统计" class="editBtn redwB"  onclick="generateReport(); "/>
                 </div>
             </form>
 
@@ -90,7 +89,7 @@
                     <td>
                         <div id="container2" style="width:80%; height: 350px; padding-left: 20px"></div>
                         <p style="margin-left:20px;">
-                            <button id="collectorexcel">导出Excel文件</button>
+                            <button id="collectorexcel" class="editBtn greenwB">导出Excel文件</button>
                         </p>
                     </td>
                 </tr>
